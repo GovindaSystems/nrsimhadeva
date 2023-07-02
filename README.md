@@ -1,83 +1,75 @@
-# nrsimhadeva
+# Nrsimhadeva
 
-nrsimhadeva é um protocolo de smart contract inovador e seguro que permite a conversão de moeda fiduciária (REAL) em criptomoedas. O objetivo principal do projeto é facilitar a adoção de criptomoedas no Brasil, tornando as transações mais rápidas, seguras e acessíveis.
+Nrsimhadeva é um protocolo que realiza a comunicação com um Gateway de pagamento que, ao receber um pagamento, converte o valor em criptomoeda.
 
 ## Índice
-
-1. [Sobre o projeto](#sobre-o-projeto)
-2. [Funcionalidades](#funcionalidades)
+1. [Sobre](#sobre)
+2. [Características](#características)
 3. [Requisitos](#requisitos)
-4. [Instalação](#instalacao)
-5. [Configuração](#configuracao)
-6. [Uso](#uso)
-7. [Contribuição](#contribuicao)
-8. [Licença](#licenca)
-9. [Contato](#contato)
+4. [Instalação](#instalação)
+5. [Uso](#uso)
+6. [Principais jornadas](#principais-jornadas)
+7. [Como plugar seu projeto](#como-plugar-seu-projeto)
+8. [Licença](#licença)
 
-## Sobre o projeto
+## Sobre
+Nrsimhadeva é um protocolo inovador que facilita a conversão de moedas fiduciárias em criptomoedas. Ao receber um pagamento através de um Gateway de pagamento, o protocolo automaticamente converte o valor recebido em criptomoeda.
 
-O nrsimhadeva é um projeto open source que busca trazer confiança e eficiência para a conversão de moeda fiduciária (REAL) em criptomoedas. Através do uso de smart contracts, o protocolo garante a segurança e a transparência das transações, enquanto possibilita a integração com uma ampla gama de criptomoedas e blockchains.
-
-## Funcionalidades
-
-- Conversão de moeda fiduciária (REAL) em criptomoedas de forma segura e eficiente
-- Suporte a múltiplas criptomoedas e blockchains
-- Transações rápidas e confiáveis
-- Taxas de conversão transparentes e atualizadas em tempo real
-- Implementação de smart contracts para garantir a segurança das transações
-- API para integração com aplicativos e serviços de terceiros
+## Características
+- Comunicação com Gateway de pagamento
+- Conversão automática de moedas fiduciárias em criptomoedas
+- Uso de Chainlink para validação de pagamentos
 
 ## Requisitos
-
 - Node.js v14.x.x ou superior
 - NPM v6.x.x ou superior
 - Solidity v0.8.x
 - Ethereum Virtual Machine (EVM) compatível com a rede blockchain
 
 ## Instalação
-
 1. Clone o repositório:
-
-```
-git clone https://github.com/seu-usuario/nrsimhadeva.git
-```
-
+\```
+git clone https://github.com/seu-username/nrsimhadeva.git
+\```
 2. Navegue até a pasta do projeto:
-
-```
+\```
 cd nrsimhadeva
-```
-
+\```
 3. Instale as dependências:
-
-```
+\```
 npm install
-```
-
-4. Compile os smart contracts:
-
-```
+\```
+4. Compile os contratos inteligentes:
+\```
 truffle compile
-```
-
-5. Faça o deploy dos smart contracts na rede blockchain escolhida:
-
-```
+\```
+5. Implemente os contratos inteligentes na rede blockchain escolhida:
+\```
 truffle migrate --network <nome_da_rede>
-```
-
-## Configuração
-
-Configure as variáveis de ambiente no arquivo `.env` de acordo com as informações da sua rede blockchain e as APIs utilizadas para as taxas de conversão.
+\```
 
 ## Uso
+O protocolo Nrsimhadeva permite a integração com Gateways de pagamento para a conversão automática de moedas fiduciárias em criptomoedas. Consulte a documentação da API para mais informações sobre os endpoints disponíveis e exemplos de uso.
 
-A API do nrsimhadeva permite a integração com aplicativos e serviços de terceiros. Consulte a documentação da API para obter mais informações sobre os endpoints disponíveis e exemplos de uso.
+## Principais jornadas
+- Gateway de Pagamento
+- Webhook
+- Criptomoedas
+- Chainlink
 
-## Contribuição
+```mermaid
+sequenceDiagram
+    Gateway de Pagamento->>NrsimhadevaContract: Enviar webhook
+    NrsimhadevaContract->>PaymentGatewayContract: Validar pagamento
+    PaymentGatewayContract-->>NrsimhadevaContract: Pagamento validado
+    NrsimhadevaContract->>CurrencyConversionContract: Converter valor do pagamento em criptomoeda
+    CurrencyConversionContract-->>NrsimhadevaContract: Valor em criptomoeda calculado
+    NrsimhadevaContract->>TokenCreationContract: Criar tokens correspondentes ao valor do pagamento
+    TokenCreationContract-->>NrsimhadevaContract: Tokens criados com sucesso
+```
 
-Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para ajudar a melhorar o projeto. Por favor, siga as diretrizes de contribuição disponíveis no arquivo `CONTRIBUTING.md`.
+## Como plugar seu projeto
+Para integrar seu projeto com o protocolo Nrsimhadeva, siga as instruções disponíveis na documentação da API.
 
 ## Licença
-
-Este projeto está licenciado sob a Licença MIT - consulte o arquivo `LICENSE` para obter detal
+Este projeto está licenciado sob a Licença MIT - veja o arquivo `LICENSE` para detalhes.
