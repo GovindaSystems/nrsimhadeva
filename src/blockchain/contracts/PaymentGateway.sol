@@ -3,7 +3,7 @@
 //Este contrato lidará com a comunicação com o gateway de pagamento. 
 //Ele receberá o webhook do gateway de pagamento e emitirá um evento quando um pagamento for recebido e validado.
 
-pragma solidity >=0.6.0 <0.9.0;
+pragma solidity ^0.6.0;
 
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 
@@ -33,7 +33,7 @@ contract PaymentGatewayContract is ChainlinkClient {
         return sendChainlinkRequestTo(oracle, request, fee);
     }
 
-    function fulfill(bytes32 _requestId, bool paymentValid) public recordChainlinkFulfillment(_requestId) {
+    function fulfill(bytes32 _requestId, bool paymentValid) public payable recordChainlinkFulfillment(_requestId) {
         if (paymentValid) {
             emit PaymentReceived(msg.sender, msg.value);
         }
