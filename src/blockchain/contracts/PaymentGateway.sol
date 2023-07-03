@@ -3,7 +3,7 @@
 //Este contrato lidará com a comunicação com o gateway de pagamento. 
 //Ele receberá o webhook do gateway de pagamento e emitirá um evento quando um pagamento for recebido e validado.
 
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity >=0.6.0 <0.9.0;
 
 import "@chainlink/contracts/src/v0.6/ChainlinkClient.sol";
 

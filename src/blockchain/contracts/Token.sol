@@ -3,8 +3,7 @@
 //Este contrato lidará com a criação de tokens correspondentes ao valor do pagamento. 
 //Ele emitirá um evento quando os tokens forem criados com sucesso.
 
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity >=0.6.0 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 

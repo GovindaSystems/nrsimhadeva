@@ -3,8 +3,7 @@
 //Este é o contrato principal que interage com os contratos acima. 
 //Ele orquestrará o processo de receber o webhook do gateway de pagamento, confirmar o pagamento, converter o valor do pagamento em criptomoeda e criar a quantidade correspondente de tokens.
 
-// SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity >=0.6.0 <0.9.0;
 
 import "./PaymentGateway.sol";
 import "./CurrencyConversion.sol";

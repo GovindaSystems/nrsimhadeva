@@ -5,6 +5,7 @@
   "author": "Jan Turk",
   "license": "MIT",
   "dependencies": {
+    "@chainlink/contracts": "^0.6.1",
     "hardhat": "^2.6.8"
   },
   "scripts": {
@@ -21,11 +22,9 @@
     "loop:CI": "hardhat run test/loop.js --network mandalaCI"
   },
   "devDependencies": {
-    "@acala-network/eth-providers": "^2.5.9",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.6.2",
-    "@polkadot/api": "8.1.1",
     "chai": "^4.3.4",
     "ethereum-waffle": "^3.4.0",
     "ethers": "~5.5.0"

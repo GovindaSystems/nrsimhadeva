@@ -1,3 +1,11 @@
+<br/>
+<p align="center">
+<a href="" target="_blank">
+<img src="img/logo.png" width="225" alt="Nrsimhadeva logo">
+</a>
+</p>
+<br/>
+
 # Nrsimhadeva
 
 Nrsimhadeva é um protocolo que realiza a comunicação com um Gateway de pagamento que, ao receber um pagamento, converte o valor em criptomoeda.
