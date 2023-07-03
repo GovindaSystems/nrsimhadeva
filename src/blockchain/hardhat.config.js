@@ -4,7 +4,20 @@ require('@nomiclabs/hardhat-waffle');
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: '0.6.0',
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.0"
+      },
+      {
+        version: "0.6.0"
+      },
+      {
+        version: "0.9.0"
+      }
+      // add more versions as needed
+    ]
+  },
   networks: {
     mandala: {
       url: 'http://127.0.0.1:8545',
